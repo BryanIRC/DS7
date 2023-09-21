@@ -53,7 +53,6 @@ class soporte
         echo "<br>" . $this->precio . " (ITBMS no incluido)";
     }
 }
-
 class video extends soporte
 {
     protected $duracion;
@@ -97,5 +96,20 @@ class juego extends soporte
         } else {
             echo "<br>De " . $this->min_num_jugadores . " a " . $this->max_num_jugadores . " jugadores.";
         }
+    }
+}
+class Foo
+{
+    public static $mi_static = 'foo';
+    public function staticValor()
+    {
+        return self::$mi_static;
+    }
+}
+class Bar extends Foo
+{
+    public function fooStatic()
+    {
+        return parent::$mi_static;
     }
 }
